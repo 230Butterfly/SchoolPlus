@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chenwei.plus.Near.Near_resource_detail">
+    <RelativeLayout
+        android:id="@+id/near_relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:id="@+id/near_title_resource"
+            android:layout_width="match_parent"
+            android:layout_height="42dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/near_back_btn"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/back" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="179dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="资源详情"
+                    android:textSize="20dp" />
+
+                <RelativeLayout
+                    android:id="@+id/near_resource_message_btn"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/message_image" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/div_white" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/near_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/near_title_resource">
+            <com.example.chenwei.plus.Tool.MyScrollView
+                android:id="@+id/near_my_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:id="@+id/near_height_stand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+
+                        />
+                    <LinearLayout
+                        android:id="@+id/near_ll_tabView"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:gravity="center"
+                        android:background="#ffff"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/near_tv_topView"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:background="#ffff">
+                            <LinearLayout
+                                android:id="@+id/near_fragment_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/title_resource"
+                                android:orientation="vertical"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/near_resource_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="高等数学(上册）"
+                                        android:textSize="18dp"
+                                        android:textColor="@color/bg_black"/>
+                                    <TextView
+                                        android:id="@+id/name_text"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="50dp"
+                                        android:text="上传者：我是你浩哥"
+                                        android:gravity="center_vertical"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/near_lastlin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/near_resource_Integer"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="积分:5"/>
+                                    <TextView
+                                        android:id="@+id/near_resource_time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="40dp"
+                                        android:text="上传时间：1997.09.29"/>
+                                    <TextView
+                                        android:id="@+id/near_resource_size"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="40dp"
+                                        android:text="大小：4M"
+                                        android:gravity="center_vertical"/>
+                                </LinearLayout>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3px"
+
+                                    android:background="@color/div_white" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/near_center_co"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="#ffff">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="资源简介："
+                                    android:textSize="16dp"
+                                    android:layout_weight="1"
+                                    />
+                                <TextView
+                                    android:id="@+id/near_resource_comment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginRight="15dp"
+                                    android:text="评分：4.2"
+                                    android:textSize="12dp"
+                                    android:textColor="#ff0000"
+                                    />
+
+                            </LinearLayout>
+                            <View
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/div_white" />
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/text_soild"
+                                android:clickable="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/near_information_text"
+                                    android:paddingTop="3dp"
+                                    android:background="@drawable/ll_customer_selected"
+                                    android:paddingBottom="3dp"
+                                    android:paddingLeft="3dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="        这是一本非常有用的高度数学教材，教材1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111中的知识非常详细"
+                                    android:textSize="15dp"
+                                    android:textColor="#696969"
+                                    android:textCursorDrawable="@null"
+                                    />
+                                <LinearLayout
+                                    android:id="@+id/near_detail_lin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"></LinearLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_marginHorizontal="15dp"
+                                android:background="@color/div_white" />
+
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:id="@+id/near_label_space"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="7dp"
+                                    android:orientation="horizontal">
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <View
+                            android:id="@+id/near_center_div"
+                            android:layout_width="match_parent"
+                            android:layout_height="3px"
+                            android:background="@color/div_white" />
+                        <LinearLayout
+                            android:id="@+id/near_evaluate_height"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:orientation="vertical"
+                            android:background="#ffff">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:orientation="horizontal"
+                                    android:background="#ffff">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:text="用户评价："
+                                        android:textSize="16dp"
+                                        />
+                                    <LinearLayout
+                                        android:id="@+id/near_all_evaluate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="10dp"
+                                            android:text="查看全部评价"
+                                            android:textSize="12dp"
+                                            android:textColor="#ff0000"
+                                            />
+                                        <ImageView
+                                            android:layout_width="18dp"
+                                            android:layout_height="10dp"
+                                            android:layout_marginTop="12dp"
+                                            android:layout_marginBottom="10dp"
+                                            android:layout_marginRight="15dp"
+                                            android:background="@drawable/enter_red"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/div_white" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/near_evaluate_space"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="10dp">
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1px"
+                                        android:background="@color/div_white"
+                                        android:layout_marginBottom="5dp"/>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                        <ImageView
+                                            android:id="@+id/near_head_view"
+                                            android:layout_width="30dp"
+                                            android:layout_height="23dp"
+                                            android:background="@mipmap/person_normal"/>
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                            <TextView
+                                                android:id="@+id/near_name_text"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="我是你浩哥"
+                                                android:textColor="@color/bg_black"/>
+                                            <TextView
+                                                android:id="@+id/near_reply_text"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+
+                                                android:text="     这个看起来还不错,这个看起来还不错,这个看起来还不错,这个看起来还不错,这个看起来还不错,"
+                                                android:textSize="16dp"/>
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="20dp"
+                                                android:orientation="horizontal">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="1"/>
+                                                <TextView
+                                                    android:id="@+id/near_evaluate_text"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="评价：5" />
+                                                <TextView
+                                                    android:id="@+id/near_time_text"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:paddingLeft="20dp"
+                                                    android:text="1997.09.29"/>
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/div_white" />
+                        <LinearLayout
+                            android:layout_marginTop="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/near_intro_re"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:id="@+id/near_intro_co"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:orientation="horizontal"
+                                    android:background="#ffff">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:text="猜你喜欢"
+                                        android:textSize="16dp"
+                                        />
+
+                                </LinearLayout>
+                                <View
+                                    android:id="@+id/near_soild_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/div_white" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/near_Recommend_space"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp">
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/near_Recommend_list"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                </android.support.v7.widget.RecyclerView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/near_recy_tail"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"></LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.example.chenwei.plus.Tool.MyScrollView>
+
+            <LinearLayout
+                android:id="@+id/near_ll_tabTopView"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="vertical" />
+            <LinearLayout
+                android:id="@+id/near_topview"
+                android:layout_marginTop="46dp"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:orientation="vertical" />
+        </FrameLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/near_operation_lin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/soild"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:radius="2dp">
+            <Button
+                android:id="@+id/near_compile_btn"
+                android:layout_marginLeft="15dp"
+                android:layout_width="80dp"
+                android:layout_marginVertical="5dp"
+                android:layout_height="match_parent"
+                android:text="联系持有者"
+                android:gravity="center"
+                android:background="@drawable/shadow"
+
+                />
+            <ImageButton
+                android:layout_marginVertical="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_white"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/near_delete_btn"
+                android:layout_marginRight="15dp"
+                android:layout_width="80dp"
+                android:layout_marginVertical="7dp"
+                android:layout_height="match_parent"
+                android:text="请求资源"
+                android:gravity="center"
+                android:background="@drawable/shadow"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+

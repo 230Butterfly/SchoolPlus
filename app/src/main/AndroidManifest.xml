@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chenwei.plus"
+    >
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- //地图包、搜索包需要的基础权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <!-- //定位包、导航包需要的额外权限（注：基础权限也需要） -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    //蓝牙传输权限
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序设置内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问WiFi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS"/>
+
+    <application
+        android:largeHeap="true"
+        android:name=".Share"
+        android:allowBackup="true"
+        android:icon="@mipmap/share"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/share"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
+
+        <service android:name="com.amap.api.location.APSService" />
+        <meta-data
+            android:name="Bmob_APP_KEY"
+            android:value="0fe7c7cb6eff2cf5a1f4d40288246b42" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="6ae8b5d31c4f76641a20ca01b0398b62" />
+
+        <activity
+            android:name=".Login.Login"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            />
+        </activity>
+        <activity
+            android:name=".Login.Register"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login.Forgetpassword"
+            android:label="@string/title_activity_forgetpassword"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Resource.Detail_resource"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".Resource.Resource_download"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Resource.All_evaluate"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Near.Near_resource_detail"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".Home.SearchActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".Person.activity.ChangeInfo"
+            android:label="修改资料"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"  />
+        <activity
+            android:name=".Person.activity.ChangeName"
+            android:label="修改昵称"
+            android:parentActivityName=".Person.activity.ChangeInfo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Person.activity.ChangeIcon"
+            android:label="修改头像"
+            android:parentActivityName=".Person.activity.ChangeInfo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Person.activity.ChangePassword"
+            android:label="修改密码"
+            android:parentActivityName=".Person.activity.ChangeInfo"
+            android:theme="@style/AppTheme.NoActionBar"  />
+        <activity
+            android:name=".Person.view.ShowPhoto"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="选择图片"
+            android:parentActivityName=".Person.activity.ChangeIcon" />
+
+        <activity android:name=".Person.activity.Goal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Person.activity.Invite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Person.activity.Phone"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Person.activity.Setting"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Person.activity.Feedback"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity android:name=".Upload.activity.MainFragmentActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Upload.activity.SDCardActivity" />
+        <activity android:name=".Upload.activity.ImagePreviewActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Home.ClassifyActivity"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+
+        <activity android:name=".Messages.MessageList"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity android:name=".Messages.MessageDetails"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

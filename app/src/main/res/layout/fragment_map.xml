@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.chenwei.plus.Near.Map_fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.amap.api.maps.MapView>
+        <RelativeLayout
+            android:id="@+id/radar_container"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             >
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/distance_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/distance_radar"
+            android:layout_marginLeft="13dp"
+            android:text="25"
+            android:textSize="20dp"/>
+         <ImageButton
+             android:id="@+id/distance_radar"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_marginLeft="5dp"
+             android:layout_alignParentBottom="true"
+             android:layout_marginBottom="20dp"
+             android:background="@drawable/radar"/>
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="30"
+            android:layout_toRightOf="@id/distance_radar"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="50dp"
+            android:maxHeight="6px"
+            android:minHeight="6px"
+            android:progressDrawable="@drawable/seekbar_style"
+        />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

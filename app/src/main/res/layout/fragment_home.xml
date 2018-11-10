@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Home.Fragment_home"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/pr_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                app:layout_widthPercent="18%"
+                android:id="@+id/pr_city">
+
+                <TextView
+                    android:id="@+id/txt_topbar"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:text="沈阳"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    app:layout_widthPercent="70%"
+                    />
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/txt_topbar"
+                    android:background="@mipmap/unfold"
+                    app:layout_widthPercent="27%"
+                    app:layout_heightPercent="30%"/>
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:gravity="center"
+                app:layout_widthPercent="72%"
+                android:id="@+id/pr_search"
+                android:layout_toRightOf="@id/pr_city">
+
+                <android.support.percent.PercentRelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    app:layout_widthPercent="80%"
+                    app:layout_heightPercent="60%"
+                    android:gravity="center"
+                    android:id="@+id/pr_searc"
+                    android:background="@drawable/home_pr_search"
+                    >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/iv_search"
+                    android:layout_height="match_parent"
+                    app:layout_widthPercent="11%"
+                    app:layout_heightPercent="85%"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/search" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="开始搜索之旅"
+                    android:textSize="14dp"
+                    android:layout_toRightOf="@id/iv_search"/>
+                </android.support.percent.PercentRelativeLayout>
+            </android.support.percent.PercentRelativeLayout>
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/message_btn"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                app:layout_widthPercent="10%"
+                android:gravity="center"
+                android:layout_toRightOf="@id/pr_search">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_widthPercent="90%"
+                    app:layout_heightPercent="70%"
+                    android:layout_gravity="center"
+                    android:background="@drawable/message_image" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <View
+            android:id="@+id/div_tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/div_white"
+            android:layout_below="@id/pr_title"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/div_tab_bar">
+          <com.example.chenwei.plus.Home.MyScrollView
+                android:id="@+id/my_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_white"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:id="@+id/rl_top">
+                        <!-- 导航页面  -->
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewPager_tool"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"></android.support.v4.view.ViewPager>
+                        <!-- 下方小圆点  -->
+                        <LinearLayout
+                            android:id="@+id/viewGroup"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="2dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_tabView"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/tv_topView"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/fragment_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@id/title_resource"
+                                android:orientation="vertical">
+
+                                <com.example.chenwei.plus.Tool.PagerSlidingTabStrip
+                                    android:id="@+id/tabs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dip"
+                                    app:pstsIndicatorColor="#000000"
+                                    app:pstsIndicatorHeight="2dp"
+                                    app:textAllCaps="false" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="700dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/bg_white"
+                        android:gravity="top|center_horizontal"
+                        android:paddingTop="0dp"
+                        android:textSize="14sp">
+                    </android.support.v4.view.ViewPager>-->
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:layout_marginTop="-1dp"
+                        android:background="@color/bg_white"
+                        android:gravity="top|center_horizontal"
+                        android:paddingTop="0dp"
+                        android:textSize="14sp"></android.support.v4.view.ViewPager>
+
+                </LinearLayout>
+            </com.example.chenwei.plus.Home.MyScrollView>
+
+            <LinearLayout
+                android:id="@+id/ll_tabTopView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

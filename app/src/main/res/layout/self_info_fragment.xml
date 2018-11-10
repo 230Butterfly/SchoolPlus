@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Person.Fragment_person">
+
+    <LinearLayout
+        android:id="@+id/self"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_marginTop="42dp"
+        android:background="#EAEAEA"
+        android:orientation="vertical"
+        android:padding="1dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <android.support.percent.PercentRelativeLayout
+            android:background="#ffff"
+            android:id="@+id/person_near_pr_title"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/person_back_btn"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                app:layout_widthPercent="10%"
+                >
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"/>
+            </android.support.percent.PercentRelativeLayout>
+            <android.support.percent.PercentRelativeLayout
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:gravity="center"
+                app:layout_widthPercent="80%"
+                android:id="@+id/person_near_pr_search"
+                android:layout_toRightOf="@id/person_back_btn">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="个人信息"
+                    android:textSize="20dp" />
+
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+
+                android:id="@+id/person_message_btn"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                app:layout_widthPercent="10%"
+                android:gravity="center"
+                android:layout_toRightOf="@id/person_near_pr_search">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/message_image" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/div_white" />
+        </android.support.percent.PercentRelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#EAEAEA" />
+
+        <LinearLayout
+            android:id="@+id/self_info"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="2dp"
+            android:background="#ffff"
+
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/resource"
+                app:civ_border_color="#4a9bec"
+                app:civ_border_width="0.5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#555555"
+                    android:text="name"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="242dp"
+                    android:layout_height="wrap_content"
+                    android:text="沈阳"
+                    android:textColor="#555555"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#EAEAEA" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="2dp"
+            android:background="#ffff"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/invite"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="214dp"
+                android:layout_marginBottom="2dp"
+                android:background="#ffff"
+                android:clickable="true"
+                android:orientation="vertical"
+                app:layout_widthPercent="20%">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/invite" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#555555"
+                    android:text="邀请码" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginBottom="2dp"
+                android:background="#ffff"
+                android:clickable="true"
+                android:orientation="vertical"
+                app:layout_widthPercent="20%">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/goal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#555555"
+                    android:text="我的积分" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sign_on"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="13dp"
+                android:layout_marginBottom="2dp"
+                android:background="#ffff"
+                android:clickable="true"
+                android:orientation="vertical"
+                app:layout_widthPercent="20%">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/sign" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#555555"
+                    android:text="每日签到" />
+            </LinearLayout>
+        </android.support.percent.PercentRelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#EAEAEA" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/vip"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#ffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="20dp"
+
+                android:text="会员等级"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                app:layout_widthPercent="90%" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/more"
+                app:layout_widthPercent="10%" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#EAEAEA" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#ffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="20dp"
+
+                android:text="绑定手机号"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                app:layout_widthPercent="90%" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/more"
+
+                app:layout_widthPercent="10%" />
+        </android.support.percent.PercentRelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#EAEAEA" />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#EAEAEA" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/change_password"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#ffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="20dp"
+
+                android:text="修改密码"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                app:layout_widthPercent="90%" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/more"
+
+                app:layout_widthPercent="10%" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#EAEAEA" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/change_user"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#ffff"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="20dp"
+                android:text="注销"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                app:layout_widthPercent="90%" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/more"
+
+                app:layout_widthPercent="10%" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#EAEAEA" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dip"
+            android:background="#EAEAEA" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#EAEAEA" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#ffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="20dp"
+
+                android:text="设置"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                app:layout_widthPercent="90%" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/more"
+
+                app:layout_widthPercent="10%" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#EAEAEA" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/feedback"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#ffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="20dp"
+
+                android:text="反馈"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                app:layout_widthPercent="90%" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/more"
+
+                app:layout_widthPercent="10%" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#EAEAEA" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

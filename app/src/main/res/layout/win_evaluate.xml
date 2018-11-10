@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/pop_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="#F5F5F5">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#ffff">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="随便说几句吧，亲！"
+                    android:textColor="@color/bg_black"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginVertical="10dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="15dp"
+                    android:background="@drawable/ll_customer_selected"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/div_white" />
+            <LinearLayout
+                android:layout_marginTop="3dp"
+                android:paddingHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ffff">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="再评个分吧，亲！"
+                    android:textColor="@color/bg_black"
+                    android:textSize="15dp"
+                    android:paddingTop="17dp"
+                    android:paddingLeft="5dp"/>
+                <RatingBar
+                    style="@style/GlimmerRatingBar"
+                    android:paddingTop="10dp"
+                    android:id="@+id/ratingBar1"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:stepSize="0.5"
+                    android:progressTint="@color/text_yellow"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/div_white" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:background="#ffff">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+
+                    android:layout_weight="1"
+
+                    android:textColor="#4876FF"
+                    android:textSize="15sp"
+
+                    android:background="#ffff"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/down_label_confirm_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="保存"
+                    android:textColor="#FF0000"
+                    android:textSize="15sp"
+
+                    android:background="#ffff"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
